@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Brian Thomas. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 @import QuartzCore;
 
 typedef void (^BCProgressBlock)(CGFloat percent);
@@ -23,6 +23,11 @@ typedef void(^BCPerformRequestBlock)(void);
  Interpolation to be run on the resultant data before it is passed into the registered completion blocks.
  */
 @property (nonatomic, copy) id (^resultsInterpolator)(id input);
+
+/**
+ Suspends callbacks until resumed (suspendCallBacks = NO).
+ */
+@property (nonatomic, assign) BOOL suspendCallBacks;
 
 - (void)addCallbacksWithProgress:(BCProgressBlock)progress andCompletion:(BCCompletionBlock)completion forIdentifier:(NSString *)identifier withRequestPerformanceBlock:(BCPerformRequestBlock)performRequestBlock;
 

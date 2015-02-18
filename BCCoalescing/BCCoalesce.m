@@ -28,11 +28,18 @@
     _requestQueue = [NSOperationQueue new];
     _requestQueue.maxConcurrentOperationCount = 1;
     _shouldPerformCallbacksOnMainThread = NO;
+    _suspendCallBacks = NO;
     _resultsInterpolator = ^(id input){
         return input;
     };
     
     return self;
+}
+
+- (void)setSuspendCallBacks:(BOOL)suspendCallBacks
+{
+    self.requestQueue.suspended = suspendCallBacks;
+    _suspendCallBacks = suspendCallBacks;
 }
 
 - (void)addCallbacksWithProgress:(BCProgressBlock)progress andCompletion:(BCCompletionBlock)completion forIdentifier:(NSString *)identifier withRequestPerformanceBlock:(BCPerformRequestBlock)performRequestBlock
@@ -60,10 +67,7 @@
     if (!callBacks)
         callBacks = @[].mutableCopy;
     
-    __weak typeof(self) weakSelf = self;
-    [self.requestQueue addOperationWithBlock:^{
-        [weakSelf.requests setObject:callBacks forKey:identifier];
-    }];
+    [self.requests setObject:callBacks forKey:identifier];
     
     return callBacks;
 }
@@ -73,9 +77,19 @@
     __weak typeof(self) weakSelf = self;
     [self.requestQueue addOperationWithBlock:^{
         NSMutableArray *callBacks = [weakSelf.requests objectForKey:identifier];
-        for (BCRequestCallback *callBack in callBacks) {
-            if (callBack.progress)
-                callBack.progress(progress);
+        if (self.shouldPerformCallbacksOnMainThread) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                for (BCRequestCallback *callBack in callBacks) {
+                    if (callBack.progress)
+                        callBack.progress(progress);
+                }
+            }];
+        }
+        else {
+            for (BCRequestCallback *callBack in callBacks) {
+                if (callBack.progress)
+                    callBack.progress(progress);
+            }
         }
     }];
 }

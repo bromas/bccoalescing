@@ -84,8 +84,6 @@
 		D30C24991A8B288C00D3A3A1 /* BCCoalescingSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BCCoalescingSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30C249E1A8B288C00D3A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30C249F1A8B288C00D3A3A1 /* BCCoalescingSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCCoalescingSampleTests.m; sourceTree = "<group>"; };
-		D30C24C01A8B28BF00D3A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D30C24C11A8B28BF00D3A3A1 /* BCCoalescingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCCoalescingTests.m; sourceTree = "<group>"; };
 		D30C24D31A8B292A00D3A3A1 /* BCCoalescing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BCCoalescing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30C24D61A8B292A00D3A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30C24D71A8B292A00D3A3A1 /* BCCoalescing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCCoalescing.h; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			children = (
 				D30C24821A8B288C00D3A3A1 /* BCCoalescingSample */,
 				D30C249C1A8B288C00D3A3A1 /* BCCoalescingSampleTests */,
-				D30C24BE1A8B28BF00D3A3A1 /* BCCoalescingTests */,
 				D30C24D41A8B292A00D3A3A1 /* BCCoalescing */,
 				D30C24E31A8B292A00D3A3A1 /* BCCoalescingTests */,
 				D30C24811A8B288C00D3A3A1 /* Products */,
@@ -192,23 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				D30C249E1A8B288C00D3A3A1 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D30C24BE1A8B28BF00D3A3A1 /* BCCoalescingTests */ = {
-			isa = PBXGroup;
-			children = (
-				D30C24C11A8B28BF00D3A3A1 /* BCCoalescingTests.m */,
-				D30C24BF1A8B28BF00D3A3A1 /* Supporting Files */,
-			);
-			path = BCCoalescingTests;
-			sourceTree = "<group>";
-		};
-		D30C24BF1A8B28BF00D3A3A1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D30C24C01A8B28BF00D3A3A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
