@@ -12,19 +12,19 @@
 
 + (instancetype)callBackWithProgress:(BCProgressBlock)progressBlock andCompletion:(BCCompletionBlock)completionBlock
 {
-    return [[BCRequestCallback alloc] initWithProgress:progressBlock andCompletion:completionBlock];
+  return [[BCRequestCallback alloc] initWithProgress:progressBlock andCompletion:completionBlock];
 }
 
 - (id)initWithProgress:(BCProgressBlock)progressBlock andCompletion:(BCCompletionBlock)completionBlock
 {
-    self = [super init];
-    if (!self)
-        return nil;
-    
-    self.progress = progressBlock;
-    self.completion = completionBlock;
-    
-    return self;
+  self = [super init];
+  if (!self)
+    return nil;
+  
+  self.progress = progressBlock;
+  self.completion = completionBlock;
+  
+  return self;
 }
 
 @end

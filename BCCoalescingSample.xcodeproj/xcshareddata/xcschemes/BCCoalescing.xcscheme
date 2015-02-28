@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D30C24DC1A8B292A00D3A3A1"
+               BuildableName = "BCCoalescingTests.xctest"
+               BlueprintName = "BCCoalescingTests"
+               ReferencedContainer = "container:BCCoalescingSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D30C24D21A8B292A00D3A3A1"
+            BuildableName = "BCCoalescing.framework"
+            BlueprintName = "BCCoalescing"
+            ReferencedContainer = "container:BCCoalescingSample.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
