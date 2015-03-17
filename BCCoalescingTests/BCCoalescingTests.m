@@ -52,7 +52,6 @@
 - (void)setUp {
   [super setUp];
   self.testCoalescer = [[BCCoalesce alloc] init];
-  //    self.performer = [[CallBackPerformer alloc] init];
 }
 
 - (void)tearDown {
