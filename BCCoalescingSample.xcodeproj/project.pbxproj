@@ -19,12 +19,17 @@
 		D30C24EB1A8B292A00D3A3A1 /* BCCoalescing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D30C24D31A8B292A00D3A3A1 /* BCCoalescing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D30C24F41A8B293F00D3A3A1 /* BCCoalesce.h in Headers */ = {isa = PBXBuildFile; fileRef = D30C24F21A8B293F00D3A3A1 /* BCCoalesce.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D30C24F51A8B293F00D3A3A1 /* BCCoalesce.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C24F31A8B293F00D3A3A1 /* BCCoalesce.m */; };
-		D36CC3A31A8BE9A600AA2AB7 /* BCRequestCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */; };
+		D36CC3A31A8BE9A600AA2AB7 /* BCRequestCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D36CC3A41A8BE9A600AA2AB7 /* BCRequestCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CC3A21A8BE9A600AA2AB7 /* BCRequestCallback.m */; };
+		D3ABDE371AE82E27003D59E4 /* BCRegistrationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = D3ABDE351AE82E27003D59E4 /* BCRegistrationToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3ABDE381AE82E27003D59E4 /* BCRegistrationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = D3ABDE351AE82E27003D59E4 /* BCRegistrationToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3ABDE391AE82E27003D59E4 /* BCRegistrationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ABDE361AE82E27003D59E4 /* BCRegistrationToken.m */; };
+		D3ABDE3A1AE82E27003D59E4 /* BCRegistrationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ABDE361AE82E27003D59E4 /* BCRegistrationToken.m */; };
+		D3D3E01C1AEB02B600F423FC /* BCTestCallBacks.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D3E01B1AEB02B600F423FC /* BCTestCallBacks.m */; };
 		D3F9C1761A94FCC20013CC86 /* BCCoalescingOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F9C1751A94FCC20013CC86 /* BCCoalescingOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3F9C1911A94FCDD0013CC86 /* BCCoalesce.h in Headers */ = {isa = PBXBuildFile; fileRef = D30C24F21A8B293F00D3A3A1 /* BCCoalesce.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3F9C1921A94FCDD0013CC86 /* BCCoalesce.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C24F31A8B293F00D3A3A1 /* BCCoalesce.m */; };
-		D3F9C1931A94FCDD0013CC86 /* BCRequestCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */; };
+		D3F9C1931A94FCDD0013CC86 /* BCRequestCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3F9C1941A94FCDD0013CC86 /* BCRequestCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = D36CC3A21A8BE9A600AA2AB7 /* BCRequestCallback.m */; };
 		D3F9C1971A94FD140013CC86 /* BCCoalescingOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F9C1711A94FCC20013CC86 /* BCCoalescingOSX.framework */; };
 		D3F9C1C51A967C890013CC86 /* BCCoalescingOSX.framework in Resources */ = {isa = PBXBuildFile; fileRef = D3F9C1711A94FCC20013CC86 /* BCCoalescingOSX.framework */; };
@@ -82,6 +87,10 @@
 		D30C24F31A8B293F00D3A3A1 /* BCCoalesce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCoalesce.m; sourceTree = "<group>"; };
 		D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRequestCallback.h; sourceTree = "<group>"; };
 		D36CC3A21A8BE9A600AA2AB7 /* BCRequestCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRequestCallback.m; sourceTree = "<group>"; };
+		D3ABDE351AE82E27003D59E4 /* BCRegistrationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRegistrationToken.h; sourceTree = "<group>"; };
+		D3ABDE361AE82E27003D59E4 /* BCRegistrationToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCRegistrationToken.m; sourceTree = "<group>"; };
+		D3D3E01A1AEB02B600F423FC /* BCTestCallBacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTestCallBacks.h; sourceTree = "<group>"; };
+		D3D3E01B1AEB02B600F423FC /* BCTestCallBacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTestCallBacks.m; sourceTree = "<group>"; };
 		D3F9C1711A94FCC20013CC86 /* BCCoalescingOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BCCoalescingOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F9C1741A94FCC20013CC86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3F9C1751A94FCC20013CC86 /* BCCoalescingOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCCoalescingOSX.h; sourceTree = "<group>"; };
@@ -173,6 +182,8 @@
 				D30C24D71A8B292A00D3A3A1 /* BCCoalescing.h */,
 				D30C24F21A8B293F00D3A3A1 /* BCCoalesce.h */,
 				D30C24F31A8B293F00D3A3A1 /* BCCoalesce.m */,
+				D3ABDE351AE82E27003D59E4 /* BCRegistrationToken.h */,
+				D3ABDE361AE82E27003D59E4 /* BCRegistrationToken.m */,
 				D36CC3A11A8BE9A600AA2AB7 /* BCRequestCallback.h */,
 				D36CC3A21A8BE9A600AA2AB7 /* BCRequestCallback.m */,
 				D30C24D51A8B292A00D3A3A1 /* Supporting Files */,
@@ -191,6 +202,8 @@
 		D30C24E31A8B292A00D3A3A1 /* BCCoalescingTests */ = {
 			isa = PBXGroup;
 			children = (
+				D3D3E01A1AEB02B600F423FC /* BCTestCallBacks.h */,
+				D3D3E01B1AEB02B600F423FC /* BCTestCallBacks.m */,
 				D30C24E61A8B292A00D3A3A1 /* BCCoalescingTests.m */,
 				D30C24E41A8B292A00D3A3A1 /* Supporting Files */,
 			);
@@ -229,6 +242,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ABDE371AE82E27003D59E4 /* BCRegistrationToken.h in Headers */,
 				D30C24F41A8B293F00D3A3A1 /* BCCoalesce.h in Headers */,
 				D30C24D81A8B292A00D3A3A1 /* BCCoalescing.h in Headers */,
 				D36CC3A31A8BE9A600AA2AB7 /* BCRequestCallback.h in Headers */,
@@ -239,6 +253,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ABDE381AE82E27003D59E4 /* BCRegistrationToken.h in Headers */,
 				D3F9C1931A94FCDD0013CC86 /* BCRequestCallback.h in Headers */,
 				D3F9C1911A94FCDD0013CC86 /* BCCoalesce.h in Headers */,
 				D3F9C1761A94FCC20013CC86 /* BCCoalescingOSX.h in Headers */,
@@ -327,7 +342,7 @@
 		D30C24781A8B288C00D3A3A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Brian Thomas";
 				TargetAttributes = {
 					D30C247F1A8B288C00D3A3A1 = {
@@ -417,6 +432,7 @@
 			files = (
 				D30C24F51A8B293F00D3A3A1 /* BCCoalesce.m in Sources */,
 				D36CC3A41A8BE9A600AA2AB7 /* BCRequestCallback.m in Sources */,
+				D3ABDE391AE82E27003D59E4 /* BCRegistrationToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D30C24E71A8B292A00D3A3A1 /* BCCoalescingTests.m in Sources */,
+				D3D3E01C1AEB02B600F423FC /* BCTestCallBacks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +451,7 @@
 			files = (
 				D3F9C1921A94FCDD0013CC86 /* BCCoalesce.m in Sources */,
 				D3F9C1941A94FCDD0013CC86 /* BCRequestCallback.m in Sources */,
+				D3ABDE3A1AE82E27003D59E4 /* BCRegistrationToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,6 +636,7 @@
 		D30C24F01A8B292A00D3A3A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -636,6 +655,7 @@
 		D30C24F11A8B292A00D3A3A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

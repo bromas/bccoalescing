@@ -8,6 +8,7 @@
 
 #import "BCCoalesce.h"
 #import "BCRequestCallback.h"
+#import "BCRegistrationToken.h"
 
 @interface BCCoalesce ()
 
@@ -42,11 +43,11 @@
   _suspendCallBacks = suspendCallBacks;
 }
 
-- (void)addCallbacksWithProgress:(BCProgressBlock)progress andCompletion:(BCCompletionBlock)completion forIdentifier:(NSString *)identifier withRequestPerformanceBlock:(BCPerformRequestBlock)performRequestBlock
+- (BCRegistrationToken *)addCallbackWithProgress:(BCProgressBlock)progress andCompletion:(BCCompletionBlock)completion forIdentifier:(NSString *)identifier withRequestPerformanceBlock:(BCPerformRequestBlock)performRequestBlock
 {
   __weak typeof(self) weakSelf = self;
+  BCRequestCallback *callBack = [BCRequestCallback callBackWithProgress:progress andCompletion:completion];
   NSBlockOperation *addNewCallbacksOperation = [NSBlockOperation blockOperationWithBlock:^{
-    BCRequestCallback *callBack = [BCRequestCallback callBackWithProgress:progress andCompletion:completion];
     
     NSMutableArray *currentCallBacks = [self activeCallBacksForIdentifier:identifier];
     BOOL shouldPerformRequest = [currentCallBacks count] > 0 ? NO : YES; /* if there is an object in this array a previous request is active for this file path */
@@ -59,8 +60,10 @@
   }];
   addNewCallbacksOperation.queuePriority = NSOperationQueuePriorityHigh;
   [weakSelf.requestQueue addOperation:addNewCallbacksOperation];
+  return [[BCRegistrationToken alloc] initWithCoalescer:self identifier:identifier andCallBack:callBack];
 }
 
+// This method should only be accessed from inside of a block which has been dropped into the serial queue
 - (NSMutableArray *)activeCallBacksForIdentifier:(NSString *)identifier
 {
   NSMutableArray *callBacks = [self.requests objectForKey:identifier];
@@ -70,6 +73,28 @@
   [self.requests setObject:callBacks forKey:identifier];
   
   return callBacks;
+}
+
+- (void)removeCallback:(id)callBack forIdentifier:(NSString *)identifier {
+  __weak typeof(self) weakSelf = self;
+  NSBlockOperation *addNewCallbacksOperation = [NSBlockOperation blockOperationWithBlock:^{
+    
+    NSMutableArray *currentCallBacks = [self activeCallBacksForIdentifier:identifier];
+    
+    if( [currentCallBacks containsObject:callBack]) {
+      [currentCallBacks removeObject:callBack];
+      
+      if ([currentCallBacks count] == 0) {
+        if (weakSelf.unregisteredBlock) {
+          weakSelf.unregisteredBlock(identifier);
+        }
+        [weakSelf.requests removeObjectForKey:identifier];
+      }
+    }
+    
+  }];
+  addNewCallbacksOperation.queuePriority = NSOperationQueuePriorityHigh;
+  [weakSelf.requestQueue addOperation:addNewCallbacksOperation];
 }
 
 - (void)identifier:(NSString *)identifier progressed:(CGFloat)progress

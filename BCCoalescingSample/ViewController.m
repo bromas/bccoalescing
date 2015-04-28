@@ -33,7 +33,7 @@
   
   __weak ViewController *weakself = self;
   
-  [self.imageCoalescer addCallbacksWithProgress:^(CGFloat percent) {
+  [self.imageCoalescer addCallbackWithProgress:^(CGFloat percent) {
     
   } andCompletion:^(id result, NSURLResponse *response, NSError *error) {
     
