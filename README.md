@@ -1,5 +1,5 @@
 ### BCCoalescing
-This is a simple coalescing object that allows multiple observers to recieve callbacks from a single source. It can be used to reproduce behavior you might otherwise get from Notification Center but without the hassle of tightly coupling your code to it.
+This is a simple coalescing object that allows multiple observers to receive callbacks from a single source. It can be used to reproduce behavior you might otherwise get from Notification Center but without the hassle of tightly coupling your code to it.
 
 #### Installation
 Using [Carthage](https://github.com/Carthage/Carthage) add
@@ -12,7 +12,7 @@ to your Cartfile
 
 #### How it works
 
-It's extremely simple and for that reason you might just want to look at the code. However, the one setence explanation is that you funnel callbacks into the coalescer in a 'perform operation' block, the coalescer performs any interpolation that you want to happen on the data, and then the callbacks are performed on each registered observer.
+It's extremely simple and for that reason you might just want to look at the code. However, the one sentence explanation is that you funnel callbacks into the coalescer in a 'perform operation' block, the coalescer performs any interpolation that you want to happen on the data, and then the callbacks are performed on each registered observer.
 
 #### When to use it
 
@@ -20,7 +20,7 @@ You can coalesce all kinds of fun things. Think image downloads, disk access, lo
 
 #### Examples
 
-Reading the unit tests should provide all of the information you need on using the provided objects, but here is a look at the API. 
+Reading the unit tests should provide all of the information you need on using the provided objects, but here is a glimpse of the API. 
 
 ```obj-c
 __weak typeof(self) *weakself = self;
@@ -35,6 +35,8 @@ __weak typeof(self) *weakself = self;
 ```
 
 This framework is consumed in a [sample project](https://github.com/bromas/TableSamples/blob/master/Table-ViewModel-Ideas/ANPostRequestManager.swift) available on github.
+
+#### Full Swift Example
 
 Initialize:
 
